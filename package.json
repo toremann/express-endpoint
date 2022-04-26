@@ -1,0 +1,24 @@
+{
+  "name": "express-endpoint",
+  "version": "1.0.0",
+  "description": "quick express endpoint",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toremann/express-endpoint.git"
+  },
+  "author": "Toremann && Neme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toremann/express-endpoint/issues"
+  },
+  "homepage": "https://github.com/toremann/express-endpoint#readme",
+  "devDependencies": {
+    "express": "^4.18.0",
+    "ip": "^1.1.5",
+    "morgan": "^1.10.0"
+  }
+}
