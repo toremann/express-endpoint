@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 var ip = require("ip");
-app.use(morgan());
+app.use(morgan('short'));
 
 const port = "3000"
 

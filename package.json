@@ -4,7 +4,8 @@
   "description": "quick express endpoint",
   "main": "app.js",
   "scripts": {
-    "test": "node app"
+    "test": "node app",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
