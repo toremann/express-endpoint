@@ -7,23 +7,24 @@ const app = express();
 var ip = require("ip");
 app.use(morgan());
 
+const port = "3000"
 
-// app.get('/', (req, res) => {
-//     res.status(200).send('Hello there');
-// })
+app.get('/', (req, res) => {
+    res.status(200).send('API ok');
+})
 
 // Endpoint for data ip:port/data/
 
 app.get("/data/", (req, res) => {
     return fs.readFile(path.join(__dirname, "/data/data.json"), (err, data) => {
       if (err) {
-        res.status(500).send("Helldev down");
+        res.status(500).send("Stock API down");
       }
   
       res.status(200).send(JSON.parse(data.toString()));
     });
   });
     
-  app.listen(3001, () => {
-    console.log("Server started");
+  app.listen(port, () => {
+    console.log("Server started", ip.address(), port);
   });
