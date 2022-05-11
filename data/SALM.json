@@ -1,0 +1,113 @@
+{
+  "instrument_info": {
+    "instrument_id": 16105712,
+    "name": "SALMAR",
+    "long_name": "SALMAR",
+    "symbol": "SALM",
+    "instrument_group_type": "EQ",
+    "instrument_type_hierarchy": "EQ/ESH",
+    "instrument_type": "ESH",
+    "isin": "NO0010310956",
+    "currency": "NOK",
+    "clearing_place": "VPS",
+    "is_tradable": true,
+    "instrument_pawn_percentage": 80,
+    "is_shortable": true,
+    "issuer_id": 252639,
+    "issuer_name": "SalMar"
+  },
+  "status_info": {
+    "trading_status": "UNKNOWN",
+    "translated_trading_status": "UNKNOWN",
+    "tick_timestamp": 1623999618000
+  },
+  "market_info": {
+    "market_id": 15,
+    "market_sub_id": 15,
+    "identifier": "2274281",
+    "tick_size_id": 34831241
+  },
+  "price_info": {
+    "last": {
+      "price": 612.4,
+      "decimals": 1
+    },
+    "open": {
+      "price": 607.8,
+      "decimals": 1
+    },
+    "close": {
+      "price": 606.6,
+      "decimals": 1
+    },
+    "turnover": 13354293,
+    "turnover_normalized": 13344944.99,
+    "turnover_volume": 21823,
+    "bid": {
+      "price": 611.8,
+      "decimals": 1
+    },
+    "ask": {
+      "price": 612.4,
+      "decimals": 1
+    },
+    "bid_volume": 144,
+    "ask_volume": 93,
+    "high": {
+      "price": 615,
+      "decimals": 1
+    },
+    "low": {
+      "price": 607.8,
+      "decimals": 1
+    },
+    "diff": {
+      "diff": 5.8,
+      "decimals": 1
+    },
+    "diff_pct": 0.96,
+    "spread": {
+      "price": 0.6,
+      "decimals": 4
+    },
+    "spread_pct": 0.1,
+    "tick_timestamp": 1624002665000,
+    "realtime": false
+  },
+  "exchange_info": {
+    "exchange_country": "NO"
+  },
+  "key_ratios_info": {
+    "pe": 34.84,
+    "ps": 5.5,
+    "eps": 20.27,
+    "pb": 6.51,
+    "dividend_per_share": 20,
+    "dividend_yield": 3.3
+  },
+  "historical_returns_info": {
+    "yield_1d": 0.96,
+    "yield_1w": 1.22,
+    "yield_1m": 6.28,
+    "yield_3m": 5.44,
+    "yield_ytd": 21.6,
+    "yield_1y": 37.46,
+    "yield_3y": 70.78,
+    "yield_5y": 158.4,
+    "realtime": false
+  },
+  "company_info": {
+    "dividend_date": 1624312800000,
+    "dividend_amount": 20,
+    "dividend_currency": "NOK",
+    "excluding_date": 1623189600000,
+    "general_meeting_date": 1654639200000,
+    "report_date": 1629928800000,
+    "report_type": "SECOND_QUARTER_EARNINGS_RESULTS",
+    "report_description": "Kvartalsrapport (2. kvartal)"
+  },
+  "statistical_info": {
+    "statistics_timestamp": 1623974405405,
+    "number_of_owners": 6022
+  }
+}

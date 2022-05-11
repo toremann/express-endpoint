@@ -1,0 +1,111 @@
+{
+  "instrument_info": {
+    "instrument_id": 17156779,
+    "name": "TIETOEVRY",
+    "long_name": "TIETOEVRY",
+    "symbol": "TIETO",
+    "instrument_group_type": "EQ",
+    "instrument_type_hierarchy": "EQ/ESH",
+    "instrument_type": "ESH",
+    "isin": "FI0009000277",
+    "currency": "NOK",
+    "clearing_place": "VPS",
+    "is_tradable": true,
+    "instrument_pawn_percentage": 75,
+    "is_shortable": true,
+    "issuer_id": 261352,
+    "issuer_name": "TietoEVRY"
+  },
+  "status_info": {
+    "trading_status": "UNKNOWN",
+    "translated_trading_status": "UNKNOWN",
+    "tick_timestamp": 1623999610000
+  },
+  "market_info": {
+    "market_id": 15,
+    "market_sub_id": 15,
+    "identifier": "2274169",
+    "tick_size_id": 34831240
+  },
+  "price_info": {
+    "last": {
+      "price": 268,
+      "decimals": 1
+    },
+    "open": {
+      "price": 265.8,
+      "decimals": 1
+    },
+    "close": {
+      "price": 260,
+      "decimals": 1
+    },
+    "turnover": 821948,
+    "turnover_normalized": 821372.64,
+    "turnover_volume": 3075,
+    "bid": {
+      "price": 267.2,
+      "decimals": 1
+    },
+    "ask": {
+      "price": 268,
+      "decimals": 1
+    },
+    "bid_volume": 795,
+    "ask_volume": 575,
+    "high": {
+      "price": 268.2,
+      "decimals": 1
+    },
+    "low": {
+      "price": 265.4,
+      "decimals": 1
+    },
+    "diff": {
+      "diff": 8,
+      "decimals": 1
+    },
+    "diff_pct": 3.08,
+    "spread": {
+      "price": 0.8,
+      "decimals": 4
+    },
+    "spread_pct": 0.3,
+    "tick_timestamp": 1624002703000,
+    "realtime": false
+  },
+  "exchange_info": {
+    "exchange_country": "NO"
+  },
+  "key_ratios_info": {
+    "pe": 26.95,
+    "ps": 1.15,
+    "eps": 0.81,
+    "pb": 2.02,
+    "dividend_per_share": 13.4,
+    "dividend_yield": 4.98
+  },
+  "historical_returns_info": {
+    "yield_1d": 3.08,
+    "yield_1w": -0.07,
+    "yield_1m": 0.98,
+    "yield_3m": -4.56,
+    "yield_ytd": -5.96,
+    "yield_1y": 4.28,
+    "realtime": false
+  },
+  "company_info": {
+    "dividend_date": 1633471200000,
+    "dividend_amount": 0.66,
+    "dividend_currency": "EUR",
+    "excluding_date": 1632434400000,
+    "general_meeting_date": 1648162800000,
+    "report_date": 1626732000000,
+    "report_type": "SECOND_QUARTER_EARNINGS_RESULTS",
+    "report_description": "Kvartalsrapport (2. kvartal)"
+  },
+  "statistical_info": {
+    "statistics_timestamp": 1623974405405,
+    "number_of_owners": 451
+  }
+}
