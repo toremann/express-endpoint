@@ -34,6 +34,13 @@ app.get('/data/', (req, res) => {
   
   app.get('/data/:stock', (req, res) => {
     return fs.readFile(path.join(__dirname, '/data/'+`${req.stock}`+'.json'), (err, data) => {
+      if (err) {
+
+        // Bug, server crashes if file is not available.
+        // Should print 500
+
+        res.status(500).send('Couldnt find stock')
+      }
     res.status(200).send(JSON.parse(data.toString()));
   });
 });
