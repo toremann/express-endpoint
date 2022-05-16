@@ -32,18 +32,22 @@ app.get('/data/', (req, res) => {
     next();
   });
   
-  app.get('/data/:stock', (req, res) => {
-    return fs.readFile(path.join(__dirname, '/data/'+`${req.stock}`+'.json'), (err, data) => {
-      if (err) {
+  app.get("/data/:stock", (req, res) => {
+    if (
+      fs.existsSync(path.join(__dirname, "/data/" + `${req.stock}` + ".json"))
+    ) {
+      console.log("Found file");
 
-        // Bug, server crashes if file is not available.
-        // Should print 500
-
-        res.status(500).send('Couldnt find stock')
-      }
-    res.status(200).send(JSON.parse(data.toString()));
+      return fs.readFile(
+        path.join(__dirname, "/data/" + `${req.stock}` + ".json"),
+        (err, data) => {
+          res.status(200).send(JSON.parse(data.toString()));
+        }
+      );
+    } else {
+      res.status(500).send('Couldnt find stock');
+    }
   });
-});
   
   app.listen(port, () => {
     console.log('Server started', ip.address(), port);
