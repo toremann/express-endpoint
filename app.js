@@ -33,10 +33,12 @@ app.get('/data/', (req, res) => {
   });
   
   app.get("/data/:stock", (req, res) => {
+    console.log(req.params)
     if (
       fs.existsSync(path.join(__dirname, "/data/" + `${req.stock}` + ".json"))
     ) {
-      console.log("Found file");
+      console.log(`\x1b[32m Found file: ${req.stock} \x1b[0m`);
+      
 
       return fs.readFile(
         path.join(__dirname, "/data/" + `${req.stock}` + ".json"),
@@ -45,7 +47,11 @@ app.get('/data/', (req, res) => {
         }
       );
     } else {
-      res.status(500).send('Couldnt find stock');
+      res.status(500).send(`Couldnt find ${req.stock}`);
+      console.log(`\x1b[31m File not found: ${req.stock} \x1b[0m`)
+      // fs.appendFile('not_found.log', `File not found: ${req.stock}\n`, (err) => {
+      //   if (err) throw err;
+      // });
     }
   });
   
