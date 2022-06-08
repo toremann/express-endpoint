@@ -1,13 +1,17 @@
 const express = require('express');
 const morgan = require('morgan');
 const fs = require('fs');
+require('dotenv').config();
 
 const path = require('path');
 const app = express();
 var ip = require('ip');
 app.use(morgan('short'));
 
+const apiKey = process.env.API_KEY
+
 const port = '3001'
+
 
 app.get('/', (req, res) => {
     res.status(200).send('API ok');
@@ -16,6 +20,7 @@ app.get('/', (req, res) => {
 // Endpoint for data ip:port/data/
 
 app.get('/data/', (req, res) => {
+  console.log('/data/', req.params, req.query)
     return fs.readFile(path.join(__dirname, '/data/data.json'), (err, data) => {
       if (err) {
         res.status(500).send('Stock API down');
@@ -25,6 +30,8 @@ app.get('/data/', (req, res) => {
     });
   });
 
+// Params
+
   app.param('stock', function(req, res, next, stock) {
     const modified = stock.toUpperCase();
   
@@ -33,7 +40,7 @@ app.get('/data/', (req, res) => {
   });
   
   app.get("/data/:stock", (req, res) => {
-    console.log(req.params)
+    console.log('params:', req.params.stock)
     if (
       fs.existsSync(path.join(__dirname, "/data/" + `${req.stock}` + ".json"))
     ) {
@@ -54,6 +61,24 @@ app.get('/data/', (req, res) => {
       // });
     }
   });
+
+// Query
+
+// TODO, build query for filtering
+
+
+// http://localhost:3001/stock?name=SALM
+
+app.get('/stock', (req, res) => {
+  console.log(req.query)
+
+
+  return res.json({
+    stock: req.query.stock
+    
+  })
+})
+
   
   app.listen(port, () => {
     console.log('Server started', ip.address(), port);
